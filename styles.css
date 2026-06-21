@@ -630,12 +630,12 @@ h1 {
   animation: rise 0.95s 0.08s both;
 }
 
-h1 span,
+h1 .title__major,
 h1 strong {
   display: block;
 }
 
-h1 span {
+h1 .title__major {
   margin-left: 0.03em;
   color: transparent;
   font-size: 0.47em;
@@ -643,6 +643,10 @@ h1 span {
   letter-spacing: 0.14em;
   line-height: 0.92;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.72);
+}
+
+h1 .title__lince {
+  letter-spacing: 0.015em;
 }
 
 h1 strong {
@@ -672,13 +676,14 @@ h1 strong {
 }
 
 .hero__subtitle {
+  max-width: 620px;
   margin: 0 0 0 5px;
   color: var(--soft-white);
-  font-family: "Barlow Condensed", sans-serif;
-  font-size: clamp(16px, 1.5vw, 21px);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(11px, 0.85vw, 14px);
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.025em;
   animation: rise 0.8s 0.55s both;
 }
 
