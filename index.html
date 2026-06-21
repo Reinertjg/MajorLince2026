@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Major Lince 2026 — uma experiência inspirada no cenário competitivo de CS2."
+    />
+    <title>Major Lince 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="hero">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="Major Lince 2026 — início">
+          <img
+            class="brand__logo"
+            src="images/logo-major-lince.png"
+            alt="Logo Major Lince"
+          />
+        </a>
+        <div class="topbar__actions">
+          <span class="topbar__status"><i></i> Em preparação</span>
+          <button
+            class="sound-control"
+            type="button"
+            aria-label="Mutar música"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="sound-control__speaker" d="M4 9v6h4l5 4V5L8 9H4Z" />
+              <path class="sound-control__waves" d="M16 8.3a5 5 0 0 1 0 7.4M18.7 5.7a8.7 8.7 0 0 1 0 12.6" />
+              <path class="sound-control__mute" d="m16.5 9 5 5m0-5-5 5" />
+            </svg>
+            <span class="sound-control__label">Som</span>
+          </button>
+        </div>
+      </header>
+
+      <audio id="background-music" preload="auto"></audio>
+
+      <section class="hero__content" id="inicio">
+        <p class="eyebrow">Counter-Strike 2 Championship</p>
+        <h1><span>Major</span> Lince <strong>2026</strong></h1>
+        <div class="title-line" aria-hidden="true"><i></i></div>
+        <p class="hero__subtitle">A caçada começa em breve.</p>
+      </section>
+
+      <section class="shirt-showcase shirt-showcase--video" aria-label="Vídeo 3D da camisa Major Lince 2026">
+        <div class="shirt-showcase__glow" aria-hidden="true"></div>
+        <video
+          class="shirt-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-label="Camisa Major Lince 2026 girando em 3D"
+        >
+          <source src="videos/tshirt_3d_pingpong.webm" type="video/webm" />
+          <source src="videos/tshirt_3d_pingpong.mp4" type="video/mp4" />
+          <source src="videos/tshirt_3d.mov" type="video/quicktime" />
+          Seu navegador não oferece suporte a este vídeo.
+        </video>
+      </section>
+
+      <aside class="c4" aria-label="C4 temática inspirada no Counter-Strike 2">
+        <div class="c4__shadow" aria-hidden="true"></div>
+        <div class="c4__base">
+          <div class="c4__explosives" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="c4__connectors" aria-hidden="true">
+            <i class="connector connector--red"></i>
+            <i class="connector connector--black"></i>
+            <i class="connector connector--yellow"></i>
+          </div>
+          <span class="c4__label c4__label--left">1.25 lb<br />Composition C-4</span>
+          <span class="c4__label c4__label--right">Charge demolition<br />M112 equiv.</span>
+          <span class="c4__tape c4__tape--top" aria-hidden="true"></span>
+          <span class="c4__tape c4__tape--bottom" aria-hidden="true"></span>
+
+          <svg class="c4__wires" viewBox="0 0 280 390" aria-hidden="true">
+            <path class="wire wire--red" d="M31 70C8 30 46 8 76 27S126 55 128 91" />
+            <path class="wire wire--black" d="M87 25C102 3 159 10 164 49S181 83 201 99" />
+            <path class="wire wire--yellow" d="M227 219C260 172 250 78 236 35S218 13 209 42" />
+            <path class="wire wire--red" d="M224 221C276 191 241 132 205 112S186 68 189 32" />
+          </svg>
+
+          <div class="c4__trigger" aria-hidden="true">
+            <span></span>
+          </div>
+
+          <div class="c4__board">
+            <div class="c4__rivets" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="c4__screen">
+              <span class="c4__screen-code" id="c4-countdown" role="timer">--D --:--:--</span>
+              <span class="c4__screen-led" aria-hidden="true"></span>
+            </div>
+            <div class="c4__detail" aria-hidden="true">
+              <span class="board-led"></span><i></i><i></i><i></i>
+            </div>
+            <div class="c4__keypad" aria-label="Teclado numérico da C4">
+              <button type="button">1</button><button type="button">2</button><button type="button">3</button>
+              <button type="button">4</button><button type="button">5</button><button type="button">6</button>
+              <button type="button">7</button><button type="button">8</button><button type="button">9</button>
+              <button type="button">*</button><button type="button">0</button><button type="button">#</button>
+            </div>
+            <span class="c4__serial">TI-84 PLUS&nbsp;&nbsp; // &nbsp;&nbsp;C-4 ML26</span>
+          </div>
+        </div>
+      </aside>
+
+      <footer class="hero__footer">
+        <span>Brasil</span>
+        <span class="hero__footer-line" aria-hidden="true"></span>
+        <span>2026</span>
+      </footer>
+    </main>
+  </body>
+</html>
