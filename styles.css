@@ -289,6 +289,8 @@ body {
   min-height: 440px;
   cursor: default;
   perspective: none;
+  pointer-events: none;
+  touch-action: pan-y;
 }
 
 .shirt-video {
