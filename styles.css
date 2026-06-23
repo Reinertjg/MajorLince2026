@@ -293,27 +293,7 @@ body {
   touch-action: pan-y;
 }
 
-.shirt-video {
-  position: relative;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  object-fit: contain;
-  background: transparent;
-  filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.5));
-}
-
-.shirt-ios-fallback {
-  display: none;
-}
-
-.is-ios .shirt-video {
-  display: none;
-}
-
-.is-ios .shirt-ios-fallback {
+.shirt-chroma {
   position: relative;
   z-index: 1;
   display: block;
@@ -337,7 +317,7 @@ body {
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.5));
 }
 
-.is-ios .shirt-ios-fallback img {
+.shirt-chroma img {
   display: none;
   position: absolute;
   inset: 0;
@@ -348,11 +328,11 @@ body {
   animation: shirt-side 8s ease-in-out infinite;
 }
 
-.is-ios:not(.chroma-ready) .shirt-ios-fallback img {
+html:not(.chroma-ready) .shirt-chroma img {
   display: block;
 }
 
-.is-ios .shirt-ios-fallback img:last-child {
+.shirt-chroma img:last-child {
   animation-delay: -4s;
 }
 

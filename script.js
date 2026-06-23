@@ -1,12 +1,6 @@
 const musicTrack = "audio/sound-track-t-spawn.mp3";
 
-const isIOS =
-  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-
-document.documentElement.classList.toggle("is-ios", isIOS);
-
-if (isIOS) {
+{
   const greenVideo = document.querySelector(".shirt-green-source");
   const chromaCanvas = document.querySelector(".shirt-chroma-canvas");
   const chromaContext = chromaCanvas.getContext("2d", {
