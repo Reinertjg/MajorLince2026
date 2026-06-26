@@ -2,17 +2,33 @@ const musicTrack = "audio/sound-track-t-spawn.mp3";
 
 {
   const shirtVideo = document.querySelector(".shirt-video");
+  const shirtFrame = document.querySelector(".shirt-frame-sequence");
   const isAppleTouchDevice =
     /iPad|iPhone|iPod/.test(navigator.userAgent) ||
     (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  const isSafari = /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(
-    navigator.userAgent,
-  );
+  const prefersFrameSequence =
+    isAppleTouchDevice || window.matchMedia("(max-width: 760px)").matches;
 
-  if (shirtVideo && (isAppleTouchDevice || isSafari)) {
-    shirtVideo.src = "videos/tshirt3D_ios.mov?v=2";
-    shirtVideo.load();
-    shirtVideo.play().catch(() => {});
+  if (shirtFrame && prefersFrameSequence) {
+    const frameCount = 142;
+    const frameDuration = 100;
+    let currentFrame = 1;
+
+    document.documentElement.classList.add("shirt-frames-active");
+
+    for (let index = 2; index <= frameCount; index += 1) {
+      const image = new Image();
+      image.src = `images/shirt-frames/frame_${String(index).padStart(3, "0")}.webp`;
+    }
+
+    window.setInterval(() => {
+      currentFrame = currentFrame >= frameCount ? 1 : currentFrame + 1;
+      shirtFrame.src = `images/shirt-frames/frame_${String(currentFrame).padStart(3, "0")}.webp`;
+    }, frameDuration);
+
+    if (shirtVideo) {
+      shirtVideo.pause();
+    }
   }
 }
 

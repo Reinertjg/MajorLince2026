@@ -320,6 +320,24 @@ body {
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.5));
 }
 
+html.shirt-frames-active .shirt-video {
+  display: none;
+}
+
+html.shirt-frames-active .shirt-frame-sequence {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .shirt-video {
+    display: none;
+  }
+
+  .shirt-frame-sequence {
+    display: block;
+  }
+}
+
 /* C4 cenográfica construída apenas com HTML, CSS e SVG. */
 .c4 {
   --c4-scale: 1;
