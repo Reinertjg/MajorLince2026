@@ -10,8 +10,8 @@ const musicTrack = "audio/sound-track-t-spawn.mp3";
     isAppleTouchDevice || window.matchMedia("(max-width: 760px)").matches;
 
   if (shirtFrame && prefersFrameSequence) {
-    const frameCount = 142;
-    const frameDuration = 100;
+    const frameCount = 284;
+    const frameDuration = 25;
     let currentFrame = 1;
 
     document.documentElement.classList.add("shirt-frames-active");
