@@ -293,7 +293,7 @@ body {
   touch-action: pan-y;
 }
 
-.shirt-chroma {
+.shirt-video-frame {
   position: relative;
   z-index: 1;
   display: block;
@@ -301,23 +301,16 @@ body {
   height: 100%;
 }
 
-.shirt-green-source {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.shirt-chroma-canvas {
+.shirt-video {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.5));
+  pointer-events: none;
 }
 
-.shirt-chroma img {
+.shirt-video-frame img {
   display: none;
   position: absolute;
   inset: 0;
@@ -325,15 +318,6 @@ body {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 24px 30px rgba(0, 0, 0, 0.5));
-  animation: shirt-side 8s ease-in-out infinite;
-}
-
-html:not(.chroma-ready) .shirt-chroma img {
-  display: block;
-}
-
-.shirt-chroma img:last-child {
-  animation-delay: -4s;
 }
 
 /* C4 cenográfica construída apenas com HTML, CSS e SVG. */

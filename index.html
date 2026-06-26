@@ -64,20 +64,21 @@
 
       <section class="shirt-showcase shirt-showcase--video" aria-label="Vídeo 3D da camisa Major Lince 2026">
         <div class="shirt-showcase__glow" aria-hidden="true"></div>
-        <div class="shirt-chroma" aria-hidden="true">
+        <div class="shirt-video-frame" aria-hidden="true">
           <video
-            class="shirt-green-source"
-            src="videos/tshirt_3d_green_pingpong.mp4"
+            class="shirt-video"
             autoplay
             muted
             loop
             playsinline
             preload="auto"
             tabindex="-1"
-          ></video>
-          <canvas class="shirt-chroma-canvas"></canvas>
+          >
+            <source src="videos/tshirt3D_ios.mov" type='video/mp4; codecs="hvc1"' />
+            <source src="videos/tshirt_3d_pingpong.webm" type="video/webm" />
+            <source src="videos/tshirt_3d_pingpong.mp4" type="video/mp4" />
+          </video>
           <img src="images/camisa-frente.png" alt="" />
-          <img src="images/camisa-costas.png" alt="" />
         </div>
       </section>
 
