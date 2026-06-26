@@ -1,5 +1,21 @@
 const musicTrack = "audio/sound-track-t-spawn.mp3";
 
+{
+  const shirtVideo = document.querySelector(".shirt-video");
+  const isAppleTouchDevice =
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isSafari = /^((?!chrome|android|crios|fxios|edgios).)*safari/i.test(
+    navigator.userAgent,
+  );
+
+  if (shirtVideo && (isAppleTouchDevice || isSafari)) {
+    shirtVideo.src = "videos/tshirt3D_ios.mov";
+    shirtVideo.load();
+    shirtVideo.play().catch(() => {});
+  }
+}
+
 const audio = document.querySelector("#background-music");
 const soundButton = document.querySelector(".sound-control");
 const soundLabel = soundButton.querySelector(".sound-control__label");
