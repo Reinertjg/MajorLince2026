@@ -11,7 +11,7 @@ const musicTrack = "audio/sound-track-t-spawn.mp3";
 
   if (shirtFrame && prefersFrameSequence) {
     const frameCount = 284;
-    const frameDuration = 25;
+    const frameDuration = 50;
     let currentFrame = 1;
 
     document.documentElement.classList.add("shirt-frames-active");
