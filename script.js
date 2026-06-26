@@ -10,7 +10,7 @@ const musicTrack = "audio/sound-track-t-spawn.mp3";
   );
 
   if (shirtVideo && (isAppleTouchDevice || isSafari)) {
-    shirtVideo.src = "videos/tshirt3D_ios.mov";
+    shirtVideo.src = "videos/tshirt3D_ios.mov?v=2";
     shirtVideo.load();
     shirtVideo.play().catch(() => {});
   }
